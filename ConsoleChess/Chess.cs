@@ -6,41 +6,41 @@ public class Chess
     
     public List<Piece> Pieces = new List<Piece>()
     {
-        new Piece('♖', Team.White, new Vector2(0, 0), MovementPattern.Rook_CanMove),
-        new Piece('♘', Team.White, new Vector2(1, 0), MovementPattern.Knight_CanMove),
-        new Piece('♗', Team.White, new Vector2(2, 0), MovementPattern.Bishop_CanMove),
-        new Piece('♕', Team.White, new Vector2(3, 0), MovementPattern.Queen_CanMove),
-        new Piece('♔', Team.White, new Vector2(4, 0), MovementPattern.King_CanMove),
-        new Piece('♗', Team.White, new Vector2(5, 0), MovementPattern.Bishop_CanMove),
-        new Piece('♘', Team.White, new Vector2(6, 0), MovementPattern.Knight_CanMove),
-        new Piece('♖', Team.White, new Vector2(7, 0), MovementPattern.Rook_CanMove),
+        new Piece(Symbols.WhiteRook, Team.White, new Vector2(0, 0), MovementPattern.Rook_CanMove),
+        new Piece(Symbols.WhiteKnight, Team.White, new Vector2(1, 0), MovementPattern.Knight_CanMove),
+        new Piece(Symbols.WhiteBishop, Team.White, new Vector2(2, 0), MovementPattern.Bishop_CanMove),
+        new Piece(Symbols.WhiteQueen, Team.White, new Vector2(3, 0), MovementPattern.Queen_CanMove),
+        new Piece(Symbols.WhiteKing, Team.White, new Vector2(4, 0), MovementPattern.King_CanMove),
+        new Piece(Symbols.WhiteBishop, Team.White, new Vector2(5, 0), MovementPattern.Bishop_CanMove),
+        new Piece(Symbols.WhiteKnight, Team.White, new Vector2(6, 0), MovementPattern.Knight_CanMove),
+        new Piece(Symbols.WhiteRook, Team.White, new Vector2(7, 0), MovementPattern.Rook_CanMove),
         
-        new Piece('♙', Team.White, new Vector2(0, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(1, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(2, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(3, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(4, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(5, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(6, 1), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.White, new Vector2(7, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(0, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(1, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(2, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(3, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(4, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(5, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(6, 1), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.WhitePawn, Team.White, new Vector2(7, 1), MovementPattern.Pawn_CanMove),
         
-        new Piece('♜', Team.Black, new Vector2(0, 7), MovementPattern.Rook_CanMove),
-        new Piece('♞', Team.Black, new Vector2(1, 7), MovementPattern.Knight_CanMove),
-        new Piece('♝', Team.Black, new Vector2(2, 7), MovementPattern.Bishop_CanMove),
-        new Piece('♛', Team.Black, new Vector2(3, 7), MovementPattern.Queen_CanMove),
-        new Piece('♚', Team.Black, new Vector2(4, 7), MovementPattern.King_CanMove),
-        new Piece('♝', Team.Black, new Vector2(5, 7), MovementPattern.Bishop_CanMove),
-        new Piece('♞', Team.Black, new Vector2(6, 7), MovementPattern.Knight_CanMove),
-        new Piece('♜', Team.Black, new Vector2(7, 7), MovementPattern.Rook_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(0, 7), MovementPattern.Rook_CanMove),
+        new Piece(Symbols.BlackKnight, Team.Black, new Vector2(1, 7), MovementPattern.Knight_CanMove),
+        new Piece(Symbols.BlackBishop, Team.Black, new Vector2(2, 7), MovementPattern.Bishop_CanMove),
+        new Piece(Symbols.BlackQueen, Team.Black, new Vector2(3, 7), MovementPattern.Queen_CanMove),
+        new Piece(Symbols.BlackKing, Team.Black, new Vector2(4, 7), MovementPattern.King_CanMove),
+        new Piece(Symbols.BlackBishop, Team.Black, new Vector2(5, 7), MovementPattern.Bishop_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(6, 7), MovementPattern.Knight_CanMove),
+        new Piece(Symbols.BlackRook, Team.Black, new Vector2(7, 7), MovementPattern.Rook_CanMove),
         
-        new Piece('♙', Team.Black, new Vector2(0, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(1, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(2, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(3, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(4, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(5, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(6, 6), MovementPattern.Pawn_CanMove),
-        new Piece('♙', Team.Black, new Vector2(7, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(0, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(1, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(2, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(3, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(4, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(5, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(6, 6), MovementPattern.Pawn_CanMove),
+        new Piece(Symbols.BlackPawn, Team.Black, new Vector2(7, 6), MovementPattern.Pawn_CanMove),
     };
 
     private bool _whiteTurn = true;
@@ -59,7 +59,7 @@ public class Chess
             piece1.Pos = move[1];
 
         if (piece2 != null)
-            piece2.Pos = move[0];
+            Pieces.Remove(piece2);
 
         _whiteTurn = !_whiteTurn;
         
@@ -106,7 +106,7 @@ public class Chess
                 Piece? piece = FindPiece(new Vector2(x, y));
 
                 char[] line = board[^(bIndex.Y)].ToCharArray();
-                line[bIndex.X] = piece == null ? ' ' : piece.Symbol;
+                line[bIndex.X] = piece == null ? ' ' : (char)piece.Symbol;
                 board[^(bIndex.Y)] = string.Join("", line);
             }
         }
@@ -150,6 +150,20 @@ public class Chess
         Vector2 fromPos = new Vector2(letters.IndexOf(coords[0][0]), int.Parse(coords[0][1].ToString()) - 1);
         Vector2 toPos = new Vector2(letters.IndexOf(coords[1][0]), int.Parse(coords[1][1].ToString())- 1);
 
+        Piece? piece = FindPiece(fromPos);
+
+        if ((piece?.Team == Team.White && !_whiteTurn) || (piece?.Team == Team.Black && _whiteTurn))
+        {
+            Console.WriteLine("Invalid move");
+            return GetMove();
+        }
+
+        if (piece == null || !piece.CanMove(Pieces, toPos))
+        {
+            Console.WriteLine("Invalid move");
+            return GetMove();
+        }
+        
         return new Vector2[2] { fromPos, toPos };
     }
 }
