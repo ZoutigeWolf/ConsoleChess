@@ -211,6 +211,12 @@ public static class MovementPattern
         
         // Check if the king can move to a safe position
         Piece? king = pieces.Find(p => p.Type == PieceType.King && p.Team == team);
+
+        if (king == null)
+        {
+            return false;
+        }
+        
         foreach (var move in GetKingMoves(pieces, king.Pos))
         {
             // Move the king to the new position and check if it's still in check
@@ -226,7 +232,7 @@ public static class MovementPattern
         }
 
         // Check if any piece can capture the attacking piece
-        Piece attacker = GetAttackingPiece(pieces, king);
+        Piece? attacker = GetAttackingPiece(pieces, king);
         if (attacker == null) {
             // There is no attacking piece, so it can't be checkmate
             return false;
@@ -341,7 +347,7 @@ public static class MovementPattern
     public static List<Vector2> GetPossibleMoves(List<Piece> pieces, Vector2 pos)
     {
         // Get the piece at the given position
-        Piece piece = pieces.Find(p => p.Pos == pos);
+        Piece? piece = pieces.Find(p => p.Pos == pos);
 
         // Check if the piece exists
         if (piece == null) {
@@ -388,7 +394,7 @@ public static class MovementPattern
         {
             targetPos = new Vector2(pos.X, pos.Y + 2 * direction);
             captured = pieces.Find(p => p.Pos == pos);
-            if (captured == null || captured.Team != pawn?.Team) moves.Add(targetPos);
+            if (captured == null || captured.Team != pawn.Team) moves.Add(targetPos);
         }
 
         // Check for captures
@@ -435,8 +441,8 @@ public static class MovementPattern
     {
         List<Vector2> moves = new List<Vector2>();
         Piece? currentPiece = pieces.Find(p => p.Pos == currentPos);
-        int x = (int)currentPos.X;
-        int y = (int)currentPos.Y;
+        int x = currentPos.X;
+        int y = currentPos.Y;
         
         // Check moves to the top-right
         while (x < 7 && y > 0) {
@@ -455,8 +461,8 @@ public static class MovementPattern
         }
         
         // Check moves to the bottom-right
-        x = (int)currentPos.X;
-        y = (int)currentPos.Y;
+        x = currentPos.X;
+        y = currentPos.Y;
         while (x < 7 && y < 7) {
             x++;
             y++;
@@ -491,8 +497,8 @@ public static class MovementPattern
         }
         
         // Check moves to the bottom-left
-        x = (int)currentPos.X;
-        y = (int)currentPos.Y;
+        x = currentPos.X;
+        y = currentPos.Y;
         while (x > 0 && y < 7) {
             x--;
             y++;
@@ -628,7 +634,7 @@ public static class MovementPattern
             Vector2 targetPos = new Vector2(x, y);
         
             // Check if the target position is occupied by a piece on the same team
-            if (pieces.Any(p => p.Pos == targetPos && p.Team == pieces.Find(p => p.Pos == pos).Team)) {
+            if (pieces.Any(p1 => p1.Pos == targetPos && p1.Team == pieces.Find(p2 => p2.Pos == pos)?.Team)) {
                 continue;
             }
         
